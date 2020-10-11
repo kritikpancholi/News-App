@@ -6,64 +6,74 @@ import 'package:kritik_app/Model/model.dart';
 import 'dart:async';
 
 
-String API_KEY = '4fa83f684b3a46fda8239f8a0f1654b7';
+String API_KEY = '4fa83f684b3a46fda8239f8a0f1654b7';        //This is to test if its working.
 var currentValue = 'Business';
-var categoriesOfData = ['Business', 'Entertainment', 'General', 'Sports','Technology'];
+var categoriesOfData = ['Business', 'Entertainment', 'General', 'Sports','Technology'];       //This is to test if its working.
 
 Future<List<Source>> fetchNewSource() async {
   final response =
-  await http.get('https://newsapi.org/v2/sources?category=${currentValue}&language=en&apiKey=${API_KEY}');
+  await http.get('https://newsapi.org/v2/sources?category=${currentValue}&language=en&apiKey=${API_KEY}');       //This is to test if its working.
 
-  if (response.statusCode == 200) {
-    List sources = json.decode(response.body)['sources'];
-    return sources.map((source) => new Source.fromJson(source)).toList();
-  } else {
-    throw Exception('Failed to load source list');
-  }
-}
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp>with TickerProviderStateMixin {
-  var list_sources;
-  final List<Tab> myTabs = <Tab>[
-    Tab(text: 'Business'),
-    Tab(text: 'Entertainment'),
-    Tab(text: 'General'),
-    Tab(text: 'Sports'),
-    Tab(text: 'Technology'),
-
-  ];
-
-  TabController _tabController;
-
-  @override
-  void initState() {
-    super.initState();
-    refreshListSource();
-    _tabController = TabController(vsync: this, length: myTabs.length);
-  }
-
-  @override
-  void dispose() {
-    _tabController.dispose();
-    super.dispose();
-  }
-
-
-  //var refershKey = GlobleKey<RefreshIndicatorState>();
+  if (response.statusCode == 200) {                                                                    //This is to test if its working.
+    List sources = json.decode(response.body)['sources'];                                             //This is to test if its working.
+    return sources.map((source) => new Source.fromJson(source)).toList();                          //This is to test if its working.
+  } else {                                                                                     //This is to test if its working.
+    throw Exception('Failed to load source list');                                         //This is to test if its working.
+  }                                                                                            //This is to test if its working.
+}                                                                                       //This is to test if its working.
+                                                                                      //This is to test if its working.
+void main() => runApp(MyApp());                                                             //This is to test if its working.
+                                                                          //This is to test if its working.
+class MyApp extends StatefulWidget {                     //This is to test if its working.
+  @override						//This is to test if its working.
+  _MyAppState createState() => _MyAppState();            //This is to test if its working.
+}                                                    //This is to test if its working.
+                                                        //This is to test if its working.
+class _MyAppState extends State<MyApp>with TickerProviderStateMixin {           //This is to test if its working.
+  var list_sources;                                                     //This is to test if its working.
+  final List<Tab> myTabs = <Tab>[                                   //This is to test if its working.
+    Tab(text: 'Business'),                                       //This is to test if its working.
+    Tab(text: 'Entertainment'),                                 //This is to test if its working.
+    Tab(text: 'General'),                                   //This is to test if its working.
+    Tab(text: 'Sports'),                                //This is to test if its working.
+    Tab(text: 'Technology'),                             //This is to test if its working.
+                                                      //This is to test if its working.
+  ];                                                    //This is to test if its working.
+                                                     //This is to test if its working.
+  TabController _tabController;                        //This is to test if its working.
+                                                      //This is to test if its working.
+  @override                                         //This is to test if its working.
+  void initState() {                                  //This is to test if its working.
+    super.initState();                                   //This is to test if its working.
+    refreshListSource();                               //This is to test if its working.
+    _tabController = TabController(vsync: this, length: myTabs.length);         //This is to test if its working.
+  }                                                   //This is to test if its working.
+                                                                                             //This is to test if its working.
+  @override                                           //This is to test if its working.
+  void dispose() {                                   //This is to test if its working.
+    _tabController.dispose();                           //This is to test if its working.
+    super.dispose();                                       //This is to test if its working.
+  }                                              //This is to test if its working.
+                                                //This is to test if its working.
+                                                 //This is to test if its working.
+  //var refershKey = GlobleKey<RefreshIndicatorState>();                
 // I use different thing;;
   final GlobalKey<RefreshIndicatorState> refreshKey =
   new GlobalKey<RefreshIndicatorState>();
+  
+                                                     //This is to test if its working.
+                                                 //This is to test if its working.
+						//This is to test if its working.
+                                                 //This is to test if its working.
+                                               //This is to test if its working.
+                                                 //This is to test if its working.
+                                               //This is to test if its working.
+                                                 //This is to test if its working.
+                                              //This is to test if its working.
+                                                 //This is to test if its working.
+ 
 
-
-
-  @override
+ @override
   Widget build(BuildContext context) {
 
 
